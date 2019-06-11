@@ -1,8 +1,6 @@
 package com.fullstack.restfulwebservices.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Calendar;
 
 @Entity
@@ -10,6 +8,7 @@ import java.util.Calendar;
 public class Todo {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private String description;
@@ -23,8 +22,7 @@ public class Todo {
     public Todo() {
     }
 
-    public Todo(Long id, String description, Boolean completed, Calendar date, Long uid) {
-        this.id = id;
+    public Todo(String description, Boolean completed, Calendar date, Long uid) {
         this.description = description;
         this.completed = completed;
         this.date = date;
