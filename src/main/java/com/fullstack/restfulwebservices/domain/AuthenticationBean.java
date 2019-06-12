@@ -1,10 +1,10 @@
 package com.fullstack.restfulwebservices.domain;
 
-public class HelloWorldBean {
+public class AuthenticationBean {
 
     private String message;
 
-    public HelloWorldBean(String message) {
+    public AuthenticationBean(String message) {
         this.message = message;
     }
 
@@ -18,7 +18,7 @@ public class HelloWorldBean {
 
     @Override
     public String toString() {
-        return "HelloWorldBean{" +
+        return "AuthenticationBean{" +
             "message='" + message + '\'' +
             '}';
     }

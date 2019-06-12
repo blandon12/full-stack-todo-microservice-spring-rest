@@ -1,6 +1,6 @@
 package com.fullstack.restfulwebservices.web;
 
-import com.fullstack.restfulwebservices.domain.HelloWorldBean;
+import com.fullstack.restfulwebservices.domain.AuthenticationBean;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloWorldController {
 
     @GetMapping("/helloWorld/{name}")
-    public HelloWorldBean getHelloWorldMessage(@PathVariable String name) {
-        return new HelloWorldBean(String.format("Hello World, %s", name));
+    public AuthenticationBean getHelloWorldMessage(@PathVariable String name) {
+        return new AuthenticationBean(String.format("Hello World, %s", name));
 //        throw new RuntimeException("some error in web service...");
     }
 }
